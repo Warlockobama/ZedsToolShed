@@ -1,0 +1,22 @@
+{
+    "mode": "report",
+    "include_request": true,
+    "include_response": true,
+    "request_max_length": 5000,
+    "response_max_length": 5000,
+    "max_instances_per_alert": 6,
+    "filter_risk": "medium+",
+    "zap": {
+      "base_url": "http://localhost:8080",
+      "api_key": "abc123"
+    },
+    "confluence": {
+      "base_url": "https://your-domain.atlassian.net/wiki",
+      "space_key": "YOUR_SPACE_KEY",
+      "page_title": "ZAP Scan Report",
+      "username": "your_confluence_username",
+      "api_token": "your_confluence_api_token"
+    },
+    "dry_run": true
+  }
+  
