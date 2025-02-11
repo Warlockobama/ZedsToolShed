@@ -100,7 +100,7 @@ def format_alert_instance(item, idx, config):
     Includes all relevant fields and, optionally, HTTP request/response details.
     """
     md = f"<details>\n<summary>Instance {idx}</summary>\n\n"
-    md += f"**Description:** {item.get('desc', 'No Description')}\n\n"
+    md += f"**Description:** {item.get('description', 'No Description')}\n\n"
     url_raw = item.get("url", "No URL")
     url_md = f"[Link]({url_raw})" if url_raw != "No URL" else url_raw
     md += f"**URL:** {url_md}\n\n"
@@ -196,7 +196,7 @@ def format_detailed_findings_by_severity(alerts, config):
                     section += f"Total instances: {total}\n\n"
                     section += "Summary:\n\n"
                     for item in items:
-                        desc = item.get("desc", "No Description")
+                        desc = item.get("description", "No Description")
                         url = item.get("url", "No URL")
                         section += f"- **Description:** {desc} | **URL:** {url}\n"
                     section += "\n"
